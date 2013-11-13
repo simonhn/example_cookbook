@@ -24,12 +24,6 @@ end
 
 include_recipe "nodejs::install_from_#{node['nodejs']['install_method']}"
 
-# setup npm
-execute "install npm modules" do
-  cwd "/vagrant"
-  command "npm install express --no-bin-links"
-end
-
 #
 # Load firewall rules we know works
 #
